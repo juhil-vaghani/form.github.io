@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to form page</title>
+
+    <script type="text/javascript">
+
+        function hello()
+        {
+            //alert("hi");
+            document.getElementById('demo').innerHTML="mamo";
+  
+        }
+        function hello1()
+        {
+            //alert('hello1');
+            var a=document.getElementById('demo2');
+            if (a.checkValidity())
+            {
+                document.getElementById('demo3').innerHTML="Valid Data";
+            }
+            else
+            {
+                document.getElementById('demo3').innerHTML=a.ValidationMessage;
+            }
+        }
+       
+
+   
+       
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <form action="insert.php" method="POST">
+        <a href="tel:7567722048">7567722048</a>
+        <table>
+            <tr>
+                <td>name:<b style=color:darkred>*</b></td>
+                <td>
+                    <input type="text" name="name" name="name" placeholder="name in upercase" required>
+                </td>
+            </tr>
+
+
+
+            <tr>    
+                <td>surname:<b style="color:brown">* </b></td>
+                <td>
+                    <input type="text" name="surname" name="lname" placeholder="name in upercase" required>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>mobile:</td>
+                <td> <input type="number" name="mobile" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>DOB:</td>
+                <td><input type="date" name="date">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Hobbies:</td>
+                <td> 
+                    <input type="checkbox" name="h1" value="music">music
+                    <input type="checkbox" name="h2" value="drawing">drawing
+                    <input type="checkbox" name="h2" value="playing" checked>playing
+                    <input type="checkbox" name="h2" value="dancing">dancing
+                </td>
+            </tr>
+            <tr>
+                <td>gender: </td>
+                <td>
+
+                    <input type="radio" name="gender" value="male" checked>male
+                    <input type="radio" name="gender" value="female">female
+                    <input type="radio" name="gender" value="other">other
+                </td>
+            </tr>
+            <input type="submit">
+        </table>
+       
+</form>
+        <p> know current date & time </p>
+
+        <button type="button"  onclick="document.getElementById('demo').innerHTML=Date()">  click </button>
+        
+        <p id="demo"> </p> 
+
+        <p> parul university</p>
+
+        <p id="demo"> be here,be vibrant</p>
+        <input type="button" value="click" onclick="hello()">
+
+        <br>
+        <br>
+
+
+        <button  onclick="window.print()">print</button>
+
+
+        <p id="d1"></p>
+     <script>
+        var x=5;
+        var y=2;
+        var z=x+y;
+        document.getElementById('d1').innerHTML="addition is" +z;
+     </script>
+
+
+     <input type="number" id="demo2" min="100" max="200">
+     <input type="button" value="click" onclick="hello1()">
+
+
+     <p id="demo3"></p>
+
+        
+
+<br>
+<br>
+
+
+     <form action="retrive.php" method="POST">
+            Name : <input type="text" name="name">
+            <button type="submit">retrive</button>
+            </form>
+
+           
+    </form>
+</body>
+
+</html>
